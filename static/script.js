@@ -5,7 +5,7 @@ console.log("BlockChain-Bot initiated")
 botui.message.add({
   delay: 500,
   loading: true,
-  content: 'Hello! It is AIMAR. How can I help you?'
+  content: 'Hello! It is your Financial Personal Assistant. How can I help you?'
 });
 
 userTextInput();
