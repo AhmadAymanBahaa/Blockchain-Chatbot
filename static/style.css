@@ -1,0 +1,77 @@
+html, body {
+background-color: #41c0cc;
+background-image: linear-gradient(-90deg, #41c0cc, #41cca5);
+}
+.botui-container {
+background-color: inherit;
+}
+
+.botui-messages-container {
+}
+
+.botui-actions-container {
+padding: 0px 30px;
+}
+
+.botui-message {
+}
+
+.botui-message-content.text {
+background-color: #e1fafc;
+color: #404040;
+}
+
+.botui-message-content.human {
+background-color: #f7ff61;
+color: #404040;
+}
+
+.botui-message-content.embed {
+}
+
+.botui-message-content-link {
+}
+
+.botui-actions-text-input {
+}
+
+.botui-actions-text-submit {
+}
+
+button.botui-actions-buttons-button {
+margin-top: 0px;
+}
+
+button {
+	width: 35px;
+	height: 35px;
+	font-size: 0;
+	background-color: red;
+	border: 0;
+	border-radius: 35px;
+	margin: 18px;
+	outline: none;
+}
+
+.notRec{
+	background-color: darkred;
+}
+
+.Rec{
+	animation-name: pulse;
+	animation-duration: 1.5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+@keyframes pulse{
+	0%{
+		box-shadow: 0px 0px 5px 0px rgba(173,0,0,.3);
+	}
+	65%{
+		box-shadow: 0px 0px 5px 13px rgba(173,0,0,.3);
+	}
+	90%{
+		box-shadow: 0px 0px 5px 13px rgba(173,0,0,0);
+	}
+}

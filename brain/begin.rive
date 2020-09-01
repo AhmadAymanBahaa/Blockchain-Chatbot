@@ -1,0 +1,19 @@
+!sub create wallet = createwallet
+!sub create = createwallet
+!sub open = openwallet
+!sub open personal wallet = openwallet
+!sub open my personal wallet = openwallet
+!sub ask = faqs
+!sub questions = faqs
+!sub financial = financialadvisor
+!sub advisor = financialadvisor
+!sub finance = financialadvisor
+!sub financial advisor = financialadvisor
+!sub advise = advice
+
+
+!sub k = ok
+!sub okay = ok
+!sub okk = ok
+!sub kk = ok
+

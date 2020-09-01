@@ -1,0 +1,75 @@
+! version = 2.0
+! local concat = newline
+> begin
++ request // This trigger is tested first.
+- {ok}    // An {ok} in the response means it's okay to get a real reply
+< begin
+! var master = localuser
+
+> topic random
++ *
+- Hello, This is Your FinTech Bot. \n
+^ How can I help you?
+^ Create Wallet, Open My Personal Wallet, Financial Advisor
+^ {topic=option}
+< topic
+
+> topic transition
++ *
+- Create Wallet, Open My Personal Wallet, Financial Advisor{topic=option}
+<topic
+
+//Options between creating/opening a personal wallet or asking for a Financial Advisor
+> topic option
++ create*
+- <set option=createwallet> Please Choose the type of Wallets you'd like to create.
+^ Apple Pay, Google Pay, PayPal.
+^ To return to More options, please type: More Options. {topic=transition}
+
++ open*
+- <set option=openwallet> Loading your wallet...
+^ To return to More options, please type: More Options {topic=transition}
+
++ financialadvisor
+- <set option=financialadvisor> Do you want to know about the facilities offered by our Financial Advisor or start analyzing?
+^ If you'd like to know more, please type: About.
+^ If you'd like analyzing, please type: Advice.
+^ {topic=advisor}
+
+< topic
+
+>topic advisor
++ about
+- <set advisor=about> The Financial Advisor helps you in several things like:
+^1) Analyze your financial transactions. \n 2) Analyze your digital receipts. \n 3) Suggest best time/place for placing a transaction \n 4) View Bank Partners
+^ To return to More options, please type: More Options {topic=transition}
+
++ advice
+- <set advisor=advice> You'll now be asked several questions to give you the best advice, Press OK. {topic=financialadvisor}
+<topic
+
+>topic financialadvisor
++ ok
+- How much are you planning to save for the next 6 months? {topic=plans}
+<topic
+
+>topic plans
++ #
+- <set plans=<star>> What is your monthly budget? {topic=budget}
+<topic
+
+>topic budget
++ #
+- <set budget=<star>> Please tell me about your main transactions made in the last 6 months. {topic=transactions}
+<topic
+
+>topic transactions
++ *
+- <set transaction=<star>> Loading Results...
+^To cancel, Please type: More Options {topic=transition}
+<topic
+
+
+
+
+
