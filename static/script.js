@@ -78,7 +78,7 @@ try {
     });
 }
 catch(err){
-    console.log("Speech Recognition could not Start. Please check that the running browser is Chrome")
+    alert("Speech Recognition could not Start. Please check that the running browser is Chrome")
 }
 
 // Recording Button Effect
@@ -96,7 +96,7 @@ $('#recButton').click(function(){
 		try{
 		    recognition.stop()
 	    }
-	    catch(err){console.log("Speech Recognition not properly functioning. Please check that the running browser is Chrome")}
+	    catch(err){alert("Speech Recognition not properly functioning. Please check that the running browser is Chrome")}
 	}
 });
 
