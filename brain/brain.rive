@@ -8,15 +8,15 @@
 
 > topic random
 + *
-- Hello, This is Your FinTech Bot. \n
+- Hello, This is Your Financial Assistant Bot. \n
 ^ How can I help you?
-^ Create Wallet, Open My Personal Wallet, Financial Advisor
+^ I can do the following and you can tell me to: Create Wallet, Open My Personal Wallet, Financial Advisor
 ^ {topic=option}
 < topic
 
 > topic transition
 + *
-- Create Wallet, Open My Personal Wallet, Financial Advisor{topic=option}
+- Please tell me one of the following: \n Create Wallet, Open My Personal Wallet, Financial Advisor{topic=option}
 <topic
 
 //Options between creating/opening a personal wallet or asking for a Financial Advisor
