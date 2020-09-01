@@ -23,7 +23,7 @@
 > topic option
 + create*
 - <set option=createwallet> Please Choose the type of Wallets you'd like to create.
-^ Apple Pay, Google Pay, PayPal.
+^ Apple Pay, Google Pay, or PayPal.
 ^ To return to More options, please type: More Options. {topic=transition}
 
 + open*
@@ -42,7 +42,7 @@
 + about
 - <set advisor=about> The Financial Advisor helps you in several things like:
 ^1) Analyze your financial transactions. \n 2) Analyze your digital receipts. \n 3) Suggest best time/place for placing a transaction \n 4) View Bank Partners
-^ To return to More options, please type: More Options {topic=transition}
+^ \n .To return to More options, please type: More Options {topic=transition}
 
 + advice
 - <set advisor=advice> You'll now be asked several questions to give you the best advice, Press OK. {topic=financialadvisor}

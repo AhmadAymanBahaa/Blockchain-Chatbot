@@ -74,7 +74,7 @@ try {
     $('#recButton').removeClass("Rec");
     $('#recButton').addClass("notRec");
     addUserInput(userInput);
-    addBotTextAndSpeak(getResponse(userInput));
+    getResponse(userInput);
     });
 }
 catch(err){
